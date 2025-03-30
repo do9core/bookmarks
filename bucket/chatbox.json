@@ -18,6 +18,12 @@
             "Remove-Item \"$dir\\`$PLUGINSDIR\",\"$dir\\`$R0\"  -Force -Recurse"
         ]
     },
+    "shortcuts": [
+        [
+            "Chatbox.exe",
+            "Chatbox"
+        ]
+    ],
     "checkver": {
         "url": "https://chatboxai.app/help-center/changelog",
         "regex": "<h3>v([\\d.]+) - \\d{4}.\\d{2}.\\d{2}</h3>"
