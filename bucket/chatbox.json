@@ -10,6 +10,14 @@
             "hash": "aabf9cac6e39a57a4e8aa877f8b3e47ee76cfeb42e77d4ede1483750bc821506"
         }
     },
+    "installer": {
+        "script": [
+            "$file = (Get-ChildItem \"$dir\" 'Chatbox*.exe' | Select-Object -First 1).FullName",
+            "Expand-7ZipArchive \"$file\" \"$dir\\\" -Removal",
+            "Expand-7ZipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal",
+            "Remove-Item \"$dir\\`$PLUGINSDIR\",\"$dir\\`$R0\"  -Force -Recurse"
+        ]
+    },
     "checkver": {
         "url": "https://chatboxai.app/help-center/changelog",
         "regex": "<h3>v([\\d.]+) - \\d{4}.\\d{2}.\\d{2}</h3>"
