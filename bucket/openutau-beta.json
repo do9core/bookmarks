@@ -26,7 +26,10 @@
         "Templates",
         "Wavtools"
     ],
-    "checkver": "github",
+    "checkver": {
+        "url": "https://github.com/stakira/OpenUtau/releases",
+        "regex": "([\\d.]+)\\s?[Bb]eta"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
