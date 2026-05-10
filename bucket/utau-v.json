@@ -24,7 +24,11 @@
         "Resamplers",
         "Singers",
         "Templates",
-        "Wavtools"
+        "Wavtools",
+        "Dependencies",
+        "Logs",
+        "SingerThemes",
+        "Themes"
     ],
     "checkver": "github",
     "autoupdate": {
