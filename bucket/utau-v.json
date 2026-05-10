@@ -12,7 +12,7 @@
     "bin": "OpenUtau.exe",
     "shortcuts": [
         [
-            "UtauV.exe",
+            "OpenUtau.exe",
             "UtauV"
         ]
     ],
