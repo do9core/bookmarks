@@ -1,0 +1,37 @@
+{
+    "version": "0.53.0",
+    "description": "DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running.",
+    "homepage": "https://github.com/esengine/DeepSeek-Reasonix",
+    "notes": "Note: This is the desktop version of reasonix, for terminal usage, following the official guide `npx reasonix code` or `npx install -g reasonix`",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/esengine/DeepSeek-Reasonix/releases/download/desktop-v0.53.0/Reasonix_0.53.0_x64-setup.exe",
+            "hash": "7d43e1cc183d4310d339c330a3eda0973a004af4092a7aa5858c89df6c2aac46",
+            "installer": {
+                "args": [
+                    "/S",
+                    "/D=$dir"
+                ]
+            }
+        }
+    },
+    "bin": "reasonix-desktop.exe",
+    "shortcuts": [
+        [
+            "reasonix-desktop.exe",
+            "Reasonix Desktop"
+        ]
+    ],
+    "persist": [
+        "data"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/esengine/DeepSeek-Reasonix/releases/download/desktop-v$version/Reasonix_$version_x64-setup.exe"
+            }
+        }
+    }
+}
