@@ -9,7 +9,12 @@
             "hash": "005e1f02bbac746952a9e0735cd92c026a46eb68cc9a118e0613ee09cd651b33"
         }
     },
-    "bin": "OpenUtau.exe",
+    "bin": [
+        [
+            "OpenUtau.exe",
+            "openutau-lunai"
+        ]
+    ],
     "shortcuts": [
         [
             "OpenUtau.exe",

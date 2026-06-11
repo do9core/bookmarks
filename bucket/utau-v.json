@@ -9,7 +9,12 @@
             "hash": "af8e246aa9e1ea47a425754024fad57f499c45ab17c86199bf4f97761f9e85c6"
         }
     },
-    "bin": "OpenUtau.exe",
+    "bin": [
+        [
+            "OpenUtau.exe",
+            "utauv"
+        ]
+    ],
     "shortcuts": [
         [
             "OpenUtau.exe",
