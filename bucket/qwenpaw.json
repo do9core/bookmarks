@@ -1,0 +1,37 @@
+{
+    "version": "1.1.11.post2",
+    "description": "Your personal AI assistant: deploy locally or in the cloud, connect across channels, and extend with skills.",
+    "homepage": "https://github.com/agentscope-ai/QwenPaw",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/agentscope-ai/QwenPaw/releases/download/v1.1.11.post2/QwenPaw-Setup-1.1.11.post2.exe",
+            "hash": "b6c847b2ced353a1317a42c06e88c46fc6fe07e2c4ee487c3222ba1c2ed2d79f",
+            "installer": {
+                "args": [
+                    "/S",
+                    "/D=$dir"
+                ]
+            }
+        }
+    },
+    "bin": "QwenPaw.exe",
+    "shortcuts": [
+        [
+            "QwenPaw.exe",
+            "QwenPaw"
+        ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/agentscope-ai/QwenPaw/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "v(.+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/agentscope-ai/QwenPaw/releases/download/v$version/QwenPaw-Setup-$version.exe"
+            }
+        }
+    }
+}

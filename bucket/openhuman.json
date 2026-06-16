@@ -1,0 +1,33 @@
+{
+    "version": "0.57.40",
+    "description": "Personal AI super intelligence with local memory and a desktop-first experience.",
+    "homepage": "https://github.com/tinyhumansai/openhuman",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/tinyhumansai/openhuman/releases/download/v0.57.40/OpenHuman_0.57.40_x64-setup.exe",
+            "hash": "524500a8c3aa8b343163be5e96e15ae95ff957e2331ded71604a16be1c8d2166",
+            "installer": {
+                "args": [
+                    "/S",
+                    "/D=$dir"
+                ]
+            }
+        }
+    },
+    "bin": "OpenHuman.exe",
+    "shortcuts": [
+        [
+            "OpenHuman.exe",
+            "OpenHuman"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/tinyhumansai/openhuman/releases/download/v$version/OpenHuman_$version_x64-setup.exe"
+            }
+        }
+    }
+}
