@@ -15,11 +15,11 @@
             }
         }
     },
-    "bin": "QwenPaw.exe",
+    "bin": "qwenpaw.cmd",
     "shortcuts": [
         [
-            "QwenPaw.exe",
-            "QwenPaw"
+            "QwenPaw Desktop.vbs",
+            "QwenPaw Desktop"
         ]
     ],
     "checkver": {
