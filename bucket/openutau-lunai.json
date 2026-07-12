@@ -1,12 +1,12 @@
 {
-    "version": "0.2.0.0",
+    "version": "0.2.0.1",
     "description": "OpenUtau for DiffSinger modified for LUNAI singers",
     "homepage": "https://github.com/keirokeer/OpenUtau-lunai",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/keirokeer/OpenUtau-lunai/releases/download/0.2.0.0/OpenUtau-win-x64.zip",
-            "hash": "ba27930f1002f560cc83d59196dc6d72938b1b63637944cefc72d88ad8546d92"
+            "url": "https://github.com/keirokeer/OpenUtau-lunai/releases/download/0.2.0.1/OpenUtau-win-x64.zip",
+            "hash": "c31cefc881e3a14153dc86eb6884ed3fd9d416bc9b502b8d9bc6791212484f6c"
         }
     },
     "bin": [
