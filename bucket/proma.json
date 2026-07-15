@@ -1,12 +1,12 @@
 {
-    "version": "0.14.20",
+    "version": "0.14.21",
     "description": "Proma is a local-first AI desktop app that brings multi-model Chat, general-purpose Agent workflows, workspaces, Skills, MCP, remote bots, and memory into one open-source client.",
     "homepage": "https://proma.cool",
     "license": "AGPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ErlichLiu/Proma/releases/download/v0.14.20/Proma-Setup-0.14.20.exe",
-            "hash": "c045cc8a2124c5ce7652f43e1538175d2e4529c0db9e541bc1102d06c08780c1",
+            "url": "https://github.com/ErlichLiu/Proma/releases/download/v0.14.21/Proma-Setup-0.14.21.exe",
+            "hash": "57d0d6d27ad747a198b45b7f28b747d78251a1dd79e97ebce0614bf22159e55e",
             "installer": {
                 "args": [
                     "/S",
