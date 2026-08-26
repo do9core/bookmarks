@@ -1,16 +1,16 @@
 {
-    "version": "0.1.6",
+    "version": "0.1.7",
     "description": "A desktop workspace for managing, installing, and synchronizing Skills and MCP Servers across AI agents.",
     "homepage": "https://github.com/konnga/skill-buddy",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/konnga/skill-buddy/releases/download/v0.1.6/SkillBuddy-v0.1.6-windows-x64.zip",
-            "hash": "c54736c044ea9da40ac112ee211adb6b268f125999aa6e26256a6ce5dbf03d6d"
+            "url": "https://github.com/konnga/skill-buddy/releases/download/v0.1.7/SkillBuddy-v0.1.7-windows-x64.zip",
+            "hash": "48b9f1171af75ee45fa236b0587b3428c43e63e2c546c6fd2bc173359fbe4f8a"
         },
         "arm64": {
-            "url": "https://github.com/konnga/skill-buddy/releases/download/v0.1.6/SkillBuddy-v0.1.6-windows-arm64.zip",
-            "hash": "63b0eec3da1e19e8ba93fc1d264203575d706f2d6dc581355e2e03b6693bfcf0"
+            "url": "https://github.com/konnga/skill-buddy/releases/download/v0.1.7/SkillBuddy-v0.1.7-windows-arm64.zip",
+            "hash": "4d3f5016eb2dcaea25bc1a909df5a883475d089103470155ed134ba1ff6d6a1a"
         }
     },
     "shortcuts": [
