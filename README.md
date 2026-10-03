@@ -15,8 +15,6 @@ scoop install <bucketname>/<manifestname>
 
 | Manifest          | Bucket                                                             |
 | ----------------- | ------------------------------------------------------------------ |
-| OpenUTAU          | [scoop-musician](https://github.com/oxygen-dioxide/scoop-musician) |
-| OpenUTAU Beta     | [scoop-musician](https://github.com/oxygen-dioxide/scoop-musician) |
 | vLabeler          | [scoop-musician](https://github.com/oxygen-dioxide/scoop-musician) |
 | vLabeler Beta     | [scoop-musician](https://github.com/oxygen-dioxide/scoop-musician) |
 
