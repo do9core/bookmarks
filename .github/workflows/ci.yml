@@ -28,6 +28,9 @@ jobs:
         with:
           modules-to-cache: BuildHelpers
           shell: powershell
+      - name: Test OpenUtau persistence
+        shell: powershell
+        run: .\my_bucket\scripts\test-openutau-persist.ps1 -ScoopPath (Convert-Path '.\scoop_core')
       - name: Test Bucket
         shell: powershell
         run: |
@@ -52,6 +55,9 @@ jobs:
         with:
           modules-to-cache: BuildHelpers
           shell: pwsh
+      - name: Test OpenUtau persistence
+        shell: pwsh
+        run: .\my_bucket\scripts\test-openutau-persist.ps1 -ScoopPath (Convert-Path '.\scoop_core')
       - name: Test Bucket
         shell: pwsh
         run: |

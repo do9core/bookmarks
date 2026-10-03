@@ -24,12 +24,12 @@
     "persist": [
         "Backups",
         "Cache",
-        "Dictionaries",
+        ["Dictionaries", "../openutau/Dictionaries"],
         "Plugins",
-        "Resamplers",
-        "Singers",
-        "Templates",
-        "Wavtools",
+        ["Resamplers", "../openutau/Resamplers"],
+        ["Singers", "../openutau/Singers"],
+        ["Templates", "../openutau/Templates"],
+        ["Wavtools", "../openutau/Wavtools"],
         "Dependencies",
         "Logs",
         "SingerThemes",
@@ -42,5 +42,10 @@
                 "url": "https://github.com/emeraldsingers/UtauV/releases/download/$version/OpenUtau-win-x64.zip"
             }
         }
-    }
+    },
+    "notes": [
+        "Shares Dictionaries, Resamplers, Singers, Templates and Wavtools with openutau; Backups, Cache and Plugins remain private.",
+        "Existing data in $persist_dir is preserved; merge only shared folders into $persist_dir/../openutau manually if needed.",
+        "Purging openutau removes shared data used by all variants."
+    ]
 }

@@ -1,12 +1,12 @@
 {
-    "version": "0.1.568",
+    "version": "0.1.571-beta",
     "description": "Open source singing synthesis platform",
-    "homepage": "https://github.com/stakira/OpenUtau/",
+    "homepage": "https://github.com/openutau/OpenUtau/",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/stakira/OpenUtau/releases/download/0.1.568/OpenUtau-win-x64.zip",
-            "hash": "c7b0daf3dbb95f7a8ba24a06422ea395d3c86d1c89712478d10fef113e500cbe"
+            "url": "https://github.com/openutau/OpenUtau/releases/download/0.1.571-beta/OpenUtau-win-x64.zip",
+            "hash": "f01d6253b4385fcb4c55dab775d337abcdccdae48866e2c1ba9dbbafd7ddec6a"
         }
     },
     "bin": [
@@ -24,22 +24,27 @@
     "persist": [
         "Backups",
         "Cache",
-        "Dictionaries",
+        ["Dictionaries", "../openutau/Dictionaries"],
         "Plugins",
-        "Resamplers",
-        "Singers",
-        "Templates",
-        "Wavtools"
+        ["Resamplers", "../openutau/Resamplers"],
+        ["Singers", "../openutau/Singers"],
+        ["Templates", "../openutau/Templates"],
+        ["Wavtools", "../openutau/Wavtools"]
     ],
     "checkver": {
-        "url": "https://github.com/stakira/OpenUtau/releases",
-        "regex": "([\\d.]+)\\s?[Bb]eta"
+        "url": "https://api.github.com/repos/openutau/OpenUtau/releases?per_page=100",
+        "regex": "\"tag_name\":\\s*\"([\\d.]+-beta)\""
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/stakira/OpenUtau/releases/download/$version/OpenUtau-win-x64.zip"
+                "url": "https://github.com/openutau/OpenUtau/releases/download/$version/OpenUtau-win-x64.zip"
             }
         }
-    }
+    },
+    "notes": [
+        "Shares Dictionaries, Resamplers, Singers, Templates and Wavtools with openutau; Backups, Cache and Plugins remain private.",
+        "Existing data in $persist_dir is preserved; merge only shared folders into $persist_dir/../openutau manually if needed.",
+        "Purging openutau removes shared data used by all variants."
+    ]
 }
