@@ -23,6 +23,11 @@ scoop install <bucketname>/<manifestname>
 Install `scoop install <bucketname>/openutau-beta` for the Beta channel. It has a
 separate `openutau-beta` command and an **OpenUtau Beta** shortcut.
 
+`utau-v` uses the official DirectML build, which supports AMD, Intel, and NVIDIA
+GPUs without installing CUDA. Upstream's newer releases use `0.0.x` version
+numbers after the older `1.2.x` series. Reinstall `utau-v` to switch from an
+installed `1.2.x` version; normal uninstallation keeps its persistent data.
+
 OpenUtau, OpenUtau Beta, OpenUtau LUNAI (`openutau-lunai`), and UtauV (`utau-v`)
 share `Dictionaries`, `Resamplers`, `Singers`, `Templates`, and `Wavtools` under
 Scoop's `persist/openutau` directory. `Backups`, `Cache`, and `Plugins` remain

@@ -1,23 +1,24 @@
 {
-    "version": "1.2.0.9",
+    "version": "0.0.1.1",
     "description": "Open singing synthesis platform / Open source UTAU successor",
     "homepage": "https://github.com/emeraldsingers/UtauV",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/emeraldsingers/UtauV/releases/download/1.2.0.9/OpenUtau-win-x64.zip",
-            "hash": "fdb280a76615581b19bc11fe512d4ecf1216663fb65ed4ebffaeb011af35f27a"
+            "url": "https://github.com/emeraldsingers/UtauV/releases/download/0.0.1.1/UtauV-win-x64-directml.zip",
+            "hash": "5a9de79ce2595e81cf25a4ce9e0f8be49f68b0a92695ab9a4b74fa5c8ec2fc85"
         }
     },
+    "extract_dir": "bin",
     "bin": [
         [
-            "OpenUtau.exe",
+            "UtauV.exe",
             "utauv"
         ]
     ],
     "shortcuts": [
         [
-            "OpenUtau.exe",
+            "UtauV.exe",
             "UtauV"
         ]
     ],
@@ -39,11 +40,12 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/emeraldsingers/UtauV/releases/download/$version/OpenUtau-win-x64.zip"
+                "url": "https://github.com/emeraldsingers/UtauV/releases/download/$version/UtauV-win-x64-directml.zip"
             }
         }
     },
     "notes": [
+        "Uses the DirectML build. Upstream reset version numbering from 1.2.x to 0.0.x; reinstall utau-v to switch to this release.",
         "Shares Dictionaries, Resamplers, Singers, Templates and Wavtools with openutau; Backups, Cache and Plugins remain private.",
         "Existing data in $persist_dir is preserved; merge only shared folders into $persist_dir/../openutau manually if needed.",
         "Purging openutau removes shared data used by all variants."
