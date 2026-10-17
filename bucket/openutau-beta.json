@@ -1,12 +1,12 @@
 {
-    "version": "0.1.573-beta",
+    "version": "0.1.575-beta",
     "description": "Open source singing synthesis platform",
     "homepage": "https://github.com/openutau/OpenUtau/",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/openutau/OpenUtau/releases/download/0.1.573-beta/OpenUtau-win-x64.zip",
-            "hash": "c68828971ccde4e96fd9c86525bb0155ee77a36be27bb24194c0a81966da3137"
+            "url": "https://github.com/openutau/OpenUtau/releases/download/0.1.575-beta/OpenUtau-win-x64.zip",
+            "hash": "84a48649ec5f69e78ee4f8c2ba987fa52f0d2708ecf6dd2e65fdad121f190cc1"
         }
     },
     "bin": [
