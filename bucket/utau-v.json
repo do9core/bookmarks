@@ -1,12 +1,12 @@
 {
-    "version": "0.0.1.5",
+    "version": "0.0.1.6",
     "description": "Open singing synthesis platform / Open source UTAU successor",
     "homepage": "https://github.com/emeraldsingers/UtauV",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/emeraldsingers/UtauV/releases/download/0.0.1.5/UtauV-win-x64-directml.zip",
-            "hash": "f9920061f0252cb3b697f5a0eecf37e2a033518f0f185cbd51f8e4ad6a60c78d"
+            "url": "https://github.com/emeraldsingers/UtauV/releases/download/0.0.1.6/UtauV-win-x64-directml.zip",
+            "hash": "63ec8c6067d05dd936bcf97ec5b57e51fc9bd087bebfd6a3e5badd2cc9d3cfb4"
         }
     },
     "extract_dir": "bin",
