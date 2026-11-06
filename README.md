@@ -11,6 +11,27 @@ scoop bucket add <bucketname> https://github.com/do9core/bookmarks
 scoop install <bucketname>/<manifestname>
 ```
 
+## OpenIDEA
+
+OpenIDEA supports x64 and ARM64 Windows. Scoop extracts the application without
+running the upstream installer or registering a system uninstaller. Microsoft
+Edge WebView2 Runtime must be available (it is included with Windows 11).
+
+```pwsh
+scoop install <bucketname>/openidea
+scoop update openidea
+scoop uninstall openidea         # Keep user settings and caches
+scoop uninstall openidea --purge # Also delete this user's application data
+```
+
+Use Scoop to update instead of the in-app updater. Close OpenIDEA before
+uninstalling. Purging deletes `%APPDATA%\ai.l0ng.openidea` and
+`%LOCALAPPDATA%\ai.l0ng.openidea`, including settings, plugins, saved credentials,
+downloaded tools and caches. These directories are shared with standalone
+OpenIDEA installations; back them up if needed. Project files, including
+project-local `.openidea` directories, are kept. Scoop's download cache can be
+removed separately with `scoop cache rm openidea`.
+
 ## Manifest source from other buckets
 
 | Manifest          | Bucket                                                             |
