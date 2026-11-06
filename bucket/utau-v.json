@@ -1,12 +1,12 @@
 {
-    "version": "0.0.1.1",
+    "version": "0.0.1.6",
     "description": "Open singing synthesis platform / Open source UTAU successor",
     "homepage": "https://github.com/emeraldsingers/UtauV",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/emeraldsingers/UtauV/releases/download/0.0.1.1/UtauV-win-x64-directml.zip",
-            "hash": "5a9de79ce2595e81cf25a4ce9e0f8be49f68b0a92695ab9a4b74fa5c8ec2fc85"
+            "url": "https://github.com/emeraldsingers/UtauV/releases/download/0.0.1.6/UtauV-win-x64-directml.zip",
+            "hash": "63ec8c6067d05dd936bcf97ec5b57e51fc9bd087bebfd6a3e5badd2cc9d3cfb4"
         }
     },
     "extract_dir": "bin",
@@ -25,12 +25,27 @@
     "persist": [
         "Backups",
         "Cache",
-        ["Dictionaries", "../openutau/Dictionaries"],
+        [
+            "Dictionaries",
+            "../openutau/Dictionaries"
+        ],
         "Plugins",
-        ["Resamplers", "../openutau/Resamplers"],
-        ["Singers", "../openutau/Singers"],
-        ["Templates", "../openutau/Templates"],
-        ["Wavtools", "../openutau/Wavtools"],
+        [
+            "Resamplers",
+            "../openutau/Resamplers"
+        ],
+        [
+            "Singers",
+            "../openutau/Singers"
+        ],
+        [
+            "Templates",
+            "../openutau/Templates"
+        ],
+        [
+            "Wavtools",
+            "../openutau/Wavtools"
+        ],
         "Dependencies",
         "Logs",
         "SingerThemes",

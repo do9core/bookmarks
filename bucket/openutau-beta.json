@@ -1,12 +1,12 @@
 {
-    "version": "0.1.571-beta",
+    "version": "0.1.575-beta",
     "description": "Open source singing synthesis platform",
     "homepage": "https://github.com/openutau/OpenUtau/",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/openutau/OpenUtau/releases/download/0.1.571-beta/OpenUtau-win-x64.zip",
-            "hash": "f01d6253b4385fcb4c55dab775d337abcdccdae48866e2c1ba9dbbafd7ddec6a"
+            "url": "https://github.com/openutau/OpenUtau/releases/download/0.1.575-beta/OpenUtau-win-x64.zip",
+            "hash": "84a48649ec5f69e78ee4f8c2ba987fa52f0d2708ecf6dd2e65fdad121f190cc1"
         }
     },
     "bin": [
@@ -24,12 +24,27 @@
     "persist": [
         "Backups",
         "Cache",
-        ["Dictionaries", "../openutau/Dictionaries"],
+        [
+            "Dictionaries",
+            "../openutau/Dictionaries"
+        ],
         "Plugins",
-        ["Resamplers", "../openutau/Resamplers"],
-        ["Singers", "../openutau/Singers"],
-        ["Templates", "../openutau/Templates"],
-        ["Wavtools", "../openutau/Wavtools"]
+        [
+            "Resamplers",
+            "../openutau/Resamplers"
+        ],
+        [
+            "Singers",
+            "../openutau/Singers"
+        ],
+        [
+            "Templates",
+            "../openutau/Templates"
+        ],
+        [
+            "Wavtools",
+            "../openutau/Wavtools"
+        ]
     ],
     "checkver": {
         "url": "https://api.github.com/repos/openutau/OpenUtau/releases?per_page=100",
