@@ -11,6 +11,27 @@ scoop bucket add <bucketname> https://github.com/do9core/bookmarks
 scoop install <bucketname>/<manifestname>
 ```
 
+## Open Design
+
+Open Design uses the upstream Windows x64 release. Scoop extracts both payloads
+without running the installer, and manages the command and Start Menu shortcut.
+
+```pwsh
+scoop install <bucketname>/open-design
+scoop update open-design
+scoop uninstall open-design         # Keep user data
+scoop uninstall open-design --purge # Delete local application data and projects
+```
+
+Close Open Design before updating or uninstalling, and use Scoop for updates
+instead of the in-app updater. Uninstall removes the `opendesign://` handler
+when it points into this Scoop installation. Purging also deletes
+`%APPDATA%\Open Design`, including local projects, credentials, settings,
+downloaded runtimes and caches. This directory is shared with standalone
+installations and other channels; back it up first. Custom `OD_DATA_DIR`
+locations and files outside this directory are kept. Remove Scoop's download
+cache separately with `scoop cache rm open-design`.
+
 ## OpenIDEA
 
 OpenIDEA supports x64 and ARM64 Windows. Scoop extracts the application without

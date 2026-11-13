@@ -1,0 +1,60 @@
+{
+    "version": "0.27.1",
+    "description": "A local-first AI design agent workspace for prototypes, websites, slides, images and videos.",
+    "homepage": "https://github.com/nexu-io/open-design",
+    "license": "Apache-2.0",
+    "notes": [
+        "Close Open Design before updating or uninstalling. Update with 'scoop update open-design' instead of the in-app updater.",
+        "Normal uninstall keeps user data. 'scoop uninstall open-design --purge' deletes this user's %APPDATA%\\Open Design, including local projects, credentials, settings, runtimes and caches shared with standalone installations. Back up your work first. Custom OD_DATA_DIR locations are kept."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/nexu-io/open-design/releases/download/open-design-v0.27.1/open-design-0.27.1-win-x64-setup.exe#/dl.7z",
+            "hash": "fb3c875a39ac8e21ee122f2f2e19f0724a7edbb50d93eb07b74d30756fb4f1db"
+        }
+    },
+    "pre_install": [
+        "Expand-7zipArchive -Path \"$dir\\`$PLUGINSDIR\\payload-base.7z\" -DestinationPath $dir",
+        "Expand-7zipArchive -Path \"$dir\\`$PLUGINSDIR\\payload-overlay.7z\" -DestinationPath $dir",
+        "Remove-Item -LiteralPath \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall Open Design.exe\" -Recurse -Force -ErrorAction Stop"
+    ],
+    "bin": [
+        [
+            "Open Design.exe",
+            "open-design"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Open Design.exe",
+            "Open Design"
+        ]
+    ],
+    "post_uninstall": [
+        "$protocol = 'HKCU:\\Software\\Classes\\opendesign'",
+        "$command = (Get-ItemProperty -LiteralPath \"$protocol\\shell\\open\\command\" -ErrorAction SilentlyContinue).'(default)'",
+        "$appRoot = Split-Path $dir",
+        "if ($command -and $command.StartsWith(('\"' + $appRoot + '\\'), [System.StringComparison]::OrdinalIgnoreCase)) {",
+        "    Remove-Item -LiteralPath $protocol -Recurse -Force -ErrorAction Stop",
+        "}",
+        "if ($purge -and $env:APPDATA) {",
+        "    $data = Join-Path $env:APPDATA 'Open Design'",
+        "    if (Test-Path -LiteralPath $data) { Remove-Item -LiteralPath $data -Recurse -Force -ErrorAction Stop }",
+        "}"
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/nexu-io/open-design/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "^open-design-v([\\d.]+)$"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/nexu-io/open-design/releases/download/open-design-v$version/open-design-$version-win-x64-setup.exe#/dl.7z",
+                "hash": {
+                    "url": "$url.sha256"
+                }
+            }
+        }
+    }
+}
