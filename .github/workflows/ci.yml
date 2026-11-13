@@ -42,6 +42,8 @@ jobs:
         run: .\my_bucket\scripts\test-openutau-persist.ps1 -ScoopPath (Convert-Path '.\scoop_core')
       - name: Test OpenIDEA uninstall
         run: .\my_bucket\scripts\test-openidea.ps1
+      - name: Test Open Design uninstall
+        run: .\my_bucket\scripts\test-open-design.ps1
       - name: Run tests
         run: |
           $env:SCOOP_HOME="$(Convert-Path '.\scoop_core')"
